@@ -24,5 +24,5 @@ This is a practice on data structure and algorithms for coding interveiw. The co
 3. **Search**
    - Sequential Search (ex:Linear)
    - Interval Search (ex: Binary)
-   > - Jump Search
-   > - Interpolation
+      - Jump Search
+      - Interpolation
