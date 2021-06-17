@@ -10,7 +10,7 @@ This is a practice on data structure and algorithms for coding interveiw. The co
 7. **Stack**
 8. **Queue**
 9. **Tire**
-10. **Graph(both directed & undirected)
+10. **Graph(both directed & undirected)**
 ## Algorithms:
 1. **Sorting**
    - Bubble Sort
