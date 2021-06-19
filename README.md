@@ -1,6 +1,6 @@
 # HackerRank_Warmup
 This is a practice on data structure and algorithms for coding interveiw. The containts of the code challenge includes:
-## Data Structures:
+## Data Structures Contents:
 1. **Array**
 2. **Linked List**
 3. **Trees**
@@ -26,3 +26,23 @@ This is a practice on data structure and algorithms for coding interveiw. The co
    - Interval Search (ex: Binary)
       - Jump Search
       - Interpolation
+
+## Data Structures:
+# Primitive
+- Integer
+- Float
+- Character
+- String
+- Boolean
+
+# Non Primitive
+- Linear
+    - Static
+        - Array
+    - Dynamic
+        - Linked List
+        - Stack
+        - Queue
+- Non Linear
+    - Tree
+    - Graph
