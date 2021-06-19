@@ -27,15 +27,15 @@ This is a practice on data structure and algorithms for coding interveiw. The co
       - Jump Search
       - Interpolation
 
-## Data Structures:
-# Primitive
+# Types of Data Structures:
+## Primitive
 - Integer
 - Float
 - Character
 - String
 - Boolean
 
-# Non Primitive
+## Non Primitive
 - Linear
     - Static
         - Array
@@ -46,3 +46,32 @@ This is a practice on data structure and algorithms for coding interveiw. The co
 - Non Linear
     - Tree
     - Graph
+
+# Types of Algorithms:
+- Simpple Recursive Algorithms
+    ```cpp
+    Algorithm Sum(A, n)
+        if n = 1
+            return A[0]
+        s = Sum(A, n-1)
+        s = s + A[n-1]
+    return s
+    ```
+- Devide and Conquer Algorithms contains two parts:
+    1. Divide the problem into smaller subproblems of the same type, and solve these subproblems recursively.
+    2. Combine the solution to the subproblems into a solution to the original problem.
+        - Examples: Quick Sort and Merge Sort
+- Dynamic Programming Algorithms
+    1. They work based on memoization, which means that these algorithms remember the past results and use them to find new results.
+    2. To find the best solution.
+    These types algorithms are generally used for optimization problems. The goal is to find the best solution among multiple solutions.
+- Greedy Algorithms
+    - We take the best we can without worrying about future consequences.
+    - We hope that by choosing a local optimum solution at each step, we will end up at a global optimum solution.
+- Brute Force Algorithms
+    - It simply tires all possibilities until a satisfactory solution is found.
+- Randomized Algorithms
+    - Use a random number at least once during the computation to make decision.
+
+
+
