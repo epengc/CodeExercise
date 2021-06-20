@@ -106,6 +106,45 @@ Table of Comparasion between **Recursive** and **Iterative** solutions
 ### When to use it?
 - When we can easily breakdown a problem into similar subproblems.
 - When we are fine with exatra overhead (both time and space) that comes with it.
+- When we need a quick working solution instead of efficient one. (Solving mathematical porblems like: Factorial or Fibonacci)
+- It is very useful when we traverse a Tree.
+- When we use memoization in recursion.
+    - This means that if you memorize the result by saving the value of each calculation for further use in the recursive call, you can in factor reduce the time complexity.
+    
+### When avoid it?
+- If time and space complexity matters for us.
+- Recursion uses more memory. If we use embedded memory. For example an application that takes more memory int the phone is not efficient.
     - If you are developing a mobile application, which should run on low memeory devices as well.
+- Recursion can be slow
+    - If you are developing a realtime application like airbag in the car system.
+
+
+## How to write recursion in 3 steps?
+
+### Factorial
+- It is the product of all positive integers less than or equal to n.
+- Denoted by n!
+- Only positive numbers
+- 0!=1.
+
+### Example 1
+4! = 4 \times 3 \times 2 \times 1 = 24
+
+### Example 2
+
+10! = 3,628,800
+
+n! = n\times (n-1)\times (n-2)\times (n-3)...
+
+### Step 1: Recursive Case - the Flow
+n! = n*(n-1)*(n-2)*...*2*1 \rightarrow n!=n*(n-1)!
+(n-1)! = (n-1)*(n-1-1)*(n-1-2)*...*2*1 = (n-1)*(n-2)*(n-3)*...*2*1
+### Step 2: Base case - the stopping criterion
+- 0! = 1
+- 1! = 1
+## Step 3: Unintentional case - the constraint
+- factorial(-1) ??
+- factorial(1.5) ??
+Please see the python file recursion.py
 
 
