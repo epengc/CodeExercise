@@ -1,6 +1,6 @@
 # Recursion
 This is a personal learning note for Udemy course: The Complete Data Structures and Algorithms Course in Python -- Elshad Karimov, Software Developer
-## What is Recursion?
+## 07. What is Recursion?
 
 **Recursion = a way of solving a problem by having a function calling itself.**
 - Performing the same operation multiple times with different inputs.
@@ -14,7 +14,7 @@ def openRussianDoll(doll):
         openRussianDoll(doll-1)
 ```
 
-## Why Recursion?
+## 08. Why Recursion?
 
 1. Recursive thinking is really important in programming and it helps you break down big problems into smaller ones and easier to use.
     - When to choose resursion?
@@ -27,7 +27,7 @@ def openRussianDoll(doll):
 3. Interviews.
 4. It is used in many algorithms \( devide and conquer, greedy and dynamic programming \)
 
-## How Recursion Works?
+## 09. How Recursion Works?
 1. A emthod calls it self.
 2. Exit from infinite loop.
 ```python
@@ -72,7 +72,7 @@ The 2nd good example:
 Stack memory is controlled by system to call the recursive method.
 
 
-## Recursive VS Iterative Solutions
+## 10. Recursive VS Iterative Solutions
 Recursive method example:
 ```python
     def powerOfTwo(n):
@@ -101,11 +101,58 @@ Table of Comparasion between **Recursive** and **Iterative** solutions
 | Easy to code ?   | Yes          | No           | We use recursion especially in the cases we know theat a problem can be divided into similar subproblems|
 
 
-## When to Use/Aviod Recursion?
+## 11. When to Use/Aviod Recursion?
 
 ### When to use it?
 - When we can easily breakdown a problem into similar subproblems.
 - When we are fine with exatra overhead (both time and space) that comes with it.
+- When we need a quick working solution instead of efficient one. (Solving mathematical porblems like: Factorial or Fibonacci)
+- It is very useful when we traverse a Tree.
+- When we use memoization in recursion.
+    - This means that if you memorize the result by saving the value of each calculation for further use in the recursive call, you can in factor reduce the time complexity.
+    
+### When avoid it?
+- If time and space complexity matters for us.
+- Recursion uses more memory. If we use embedded memory. For example an application that takes more memory int the phone is not efficient.
     - If you are developing a mobile application, which should run on low memeory devices as well.
+- Recursion can be slow
+    - If you are developing a realtime application like airbag in the car system.
+
+
+## 12. How to write recursion in 3 steps?
+
+### Factorial
+- It is the product of all positive integers less than or equal to n.
+- Denoted by n!
+- Only positive numbers
+- 0!=1.
+
+### Example 1
+4! = 4 \times 3 \times 2 \times 1 = 24
+
+### Example 2
+
+10! = 3,628,800
+
+n! = n\times (n-1)\times (n-2)\times (n-3)...
+
+### Step 1: Recursive Case - the Flow
+n! = n*(n-1)*(n-2)*...*2*1 \rightarrow n!=n*(n-1)!
+(n-1)! = (n-1)*(n-1-1)*(n-1-2)*...*2*1 = (n-1)*(n-2)*(n-3)*...*2*1
+### Step 2: Base case - the stopping criterion
+- 0! = 1
+- 1! = 1
+## Step 3: Unintentional case - the constraint
+- factorial(-1) ??
+- factorial(1.5) ??
+Please see the python file recursion.py
+
+## 13. Fibonacci numbers - Recursion
+Fibonacci sequence is a sequence of numbers in which each number is the sum of the two preceding ones and the sequence starts from 0 and 1.
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 ...
+### Step 1: Recursive case - the flow
+5=3+2   f(n)=f(n-1)+f(n-2)
+### Step 2: Base case - the stopping criterion
+- 0 and 1
 
 
