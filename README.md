@@ -1,4 +1,4 @@
-# HackerRank_Warmup
+# Data Structure and Algorithm Workout
 This is a practice on data structure and algorithms for coding interveiw. The containts of the code challenge includes:
 ## Data Structures Contents:
 1. **Array**
