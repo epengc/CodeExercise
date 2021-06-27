@@ -2,6 +2,8 @@
 # coding=utf-8
 
 def d2b(n):
+    if n<0:
+        n = n*-1
     if n//2 == 0:
         return n%2
     else:

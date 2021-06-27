@@ -1,0 +1,377 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{kpfonts}
+\usepackage{multirow}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\title{Recursion}
+\author{Elshad Karimov}
+
+\begin{document}
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+This is a personal learning note for Udemy course: The Complete Data Structures and Algorithms Course in Python -- Elshad Karimov, Software Developer.
+
+\section{Basic Knowledge}
+
+\subsection{What is Recursion}
+\textbf{Recursion = a way of solving a problem by having a function calling itself.}
+\begin{itemize}
+\item Performing the same operation multiple times with different inputs.
+\item In every step we try smaller inputs to make the problem smaller.
+\item Base condition is needed to stop the recursion, otherwise infinite loop will occuri.
+\end{itemize}
+
+\begin{lstlisting}[language=Python, caption=$1^{st}$ Standard Example]
+
+def openRussianDoll(doll):
+	if doll == 1:
+		print("All dolls are opened")
+	else:
+		openRussianDoll(doll-1)
+		
+\end{lstlisting}
+
+
+\subsection{Why Recursion?}
+\begin{itemize}
+\item Recursive thinking is really important in programming and it helps you break down big problems into smaller ones and easier to use.
+	when to choose recursion?
+	\subitem 1. If you can divine the problem into similar sub problems.
+	\subitem 2. Design an algorithm to compute nth...
+	\subitem 3. Write code to list the n...
+	\subitem 4. Implement a method to compute all.
+	\subitem 5. Practice.
+\item The prominenent usage of recursion in date structures like treees and graphs. \\ \textbf{So when you are dealing with trees, the recursion becomes almost mandatory to use.}
+
+\item Interviews.
+\item It is used in many algorithms. (Divide and conquer, greedy and dynamic programming)
+\end{itemize}
+
+
+\subsection{How Recursion Works?}
+
+\begin{itemize}
+\item 1. A emthod calls it self.
+\item 2. Exit from infinite loop.
+\end{itemize}
+
+\begin{lstlisting}[language=Python, caption=$2^{nd}$ Standard Example]
+def recursionMethod(parameters):
+	if exit from condition satisfied:
+		return some value
+	else:	
+		recursionMethod(modified parameters)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption=$1^{st}$ Good Example]
+def firstMethod():
+	secondMethod()
+	print("I am the first method")
+	
+def secondMethod():
+	thirdMethod()
+	print("I am the second method")
+
+def thirdMethod():
+	fourthMethod()
+	print("I am the third method")
+
+def fourthMethod()
+	print("I am the fourth method")
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption=$2^{nd}$ Good Example]
+def recursiveMethod(n):
+	if n<1:
+ 		print("n is less than 1")
+	else:
+		recursiveMethod(n-1)
+		print(n)
+\end{lstlisting}
+
+Stack memory is controlled by system to call the recursive method.
+
+\subsection{Recursive VS Iterative Solutions}
+
+Recursive method example:
+
+\begin{lstlisting}[language=Python, caption=Recursive Method Example]
+def powerOfTwo(n):
+	if n == 0:
+		return 1
+	else:
+		power = powerOfTwo(n-1)
+		return power*2
+\end{lstlisting}
+
+
+Iterative method example:
+
+\begin{lstlisting}[language=Python, caption=Iterative Method Example]
+def powerOfTwoIt(n):
+	i = 0
+	power = 1
+	while i<n :
+		power = power*2
+		i = i+1
+	return power
+\end{lstlisting}
+
+\begin{center}
+\begin{tabular}{| p{3cm} | p{1.5cm} | p{1.5cm} | p{9cm} |}
+\hline
+\textbf{Points} & \textbf{Recursion} & \textbf{Iteration}& \\
+\hline
+Space Efficient? & No & Yes & No Stack Memory Require in Case of Iteration\\
+\hline
+Time Efficient? & No & Yes & In Case of Recursion Needs More Time for Pop and Push Elements to Stack Memory which Makes Recursion Less Time Efficient\\
+\hline
+Easy to Code? & Yes & No & We use Recursion Especially in the Cases We Know 
+Threat a Problem can be Divided into Similar Sub-problems.\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{When to Use/Avoid Recursion?}
+\subsubsection{When to use it?}
+\begin{itemize}
+\item When we can easily breakdown a problem into similar sub-problems.
+\item When we are fine with extra overhead (both time and space) that comes with it.
+\item When we need a quick working solution instead of efficient one. (Solving mathematical problems like: Factorial or Fibonacci)
+\item It is very useful when we traverse a Tree.
+\item When we use memorization in recursion.
+\begin{itemize}
+\item This means that if you memorize the result by saving the value of each calculation for further use in the recursive call, you can in factor reduce the time complexity.
+\end{itemize}
+\end{itemize}
+
+\subsubsection{When avoid it?}
+\begin{itemize}
+\item If time and space complexity matters for us.
+\item Recursion uses more memory. If we use embedded memory. For example an application that takes more memory int the phone is not efficient.
+\begin{itemize}
+\item If you are developing a mobile application, which should run on low memory devices as well.
+\end{itemize}
+\item Recursion can be slow
+\begin{itemize}
+\item If you are developing a real-time application like air-bag in the car system.
+\end{itemize}
+\end{itemize}
+
+\subsection{How to Write Recursion in 3 Steps}
+\subsubsection{Example of Factorial}
+\begin{itemize}
+\item It is the product of all positive integers less than or equal to n.
+\item Denoted by n!
+\item Only positive numbers
+\item 0!=1.
+\end{itemize}
+
+\textbf{Example 1:} $4!=4 \times 3 \times 2 \times 1 =24$. \\
+
+\textbf{Example 2:} $10!=3,628,800$.\\
+
+Its general term formula is $n! = n \times (n-1) \times (n-2) \times \ldots \times 2 \times 1 = n \times (n-1)!$
+
+\begin{itemize}
+\item \textbf{Step 1: Recursive Case - the Flow}
+\begin{itemize}
+\item Get the general term formula, such as $n!=n\times (n-1)\times (n-2)\ldots\times 2\times 1 \rightarrow n! = n\times (n-1)!$
+\item $(n-1)!=(n-1)\times (n-1-1)\times (n-1-2)\times \ldots \times 2\times 1 = (n-1)\times (n-2)\times (n-3)\times \ldots \times 2 \times 1$
+\end{itemize}
+
+\item \textbf{Step 2: Base Case - the Stopping Criterion}
+\begin{itemize}
+\item 0! = 1
+\item 1! = 1
+\end{itemize}
+
+\item \textbf{Step 3: Unintentional Case - the Constraint}
+\begin{itemize}
+\item factorial(-1) ??
+\item factorial(1.5) ??
+\end{itemize}
+Please see the python file recursion.py.
+\end{itemize}
+
+\subsubsection{Example of Fibonacci Number - Recursion}
+Fibonacci sequence is a sequence of numbers in which each number is the sum of the two preceding ones and the sequence starts from 0 and 1.
+152 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 ...
+\begin{itemize}
+\item \textbf{Step 1: Recursive Case - the Flow}
+$5=3+2$, and $f(n)=f(n-1)+f(n+2)$
+\item \textbf{Step 2: Base Case - the Stopping Criterion}
+\begin{itemize}
+\item $0$ and $1$
+\end{itemize}
+\item \textbf{Step 3: Unintentional Case - the Constraint}
+\end{itemize}
+
+\section{Interview Questions}
+\subsection{Question: How to find the sum of digits of a positive integer number using recursion?}
+
+\begin{itemize}
+\item \textbf{Step 1: Recursive Case - the Flow} So the general term formula is $f(n)=n\%10+f(n/10)$.\\
+
+\begin{table}[h!]
+\centering
+\caption{Table Example of the flow}
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{Number}&\textbf{Quotient}&\textbf{Remainder} \\
+\hline
+10 & 10/10 = 1 & Remainder = 0 \\
+54 & 54/10 = 5 & Remainder = 4 \\
+112 & 112/10 = 11 & Remainder = 2\\
+11 & 11/10 = 1 & Remainder =1 \\
+\hline
+\end{tabular}
+\end{table}
+
+\item \textbf{Step 2: Base case - the stopping criterion}
+\begin{itemize}
+\item n = 0
+\end{itemize}
+
+\item \textbf{Step 3: Unintentional Case - the Constraint}
+\begin{itemize}
+\item sumofDigits(-11) ??
+\item sumofDigits(1.5) ??
+\end{itemize}
+\end{itemize}
+\begin{lstlisting}[language=Python, caption=Solution for Sum of Digits in Recursion]
+def digits_sum(n):
+	assert n>=0 and int(n)==n, "the input number should be the non negative number"
+	if n < 10:
+		return n
+	else:
+		return n%10+digits_sum(int(n/10))
+
+print(digits_sum(1))
+\end{lstlisting}
+
+\subsection{How to calculate power of a number using recursion?}
+\begin{itemize}
+\item \textbf{Step 1: Recursive Case - the Flow} $x^{n}=x \times x \times \ldots \ldots x$ and $2^{4}=2 \times 2 \times 2 \times 2$
+
+\end{itemize}
+
+\subsection{How to find GCD (Greatest Common Divisor) of two numbers using recursion?}
+\begin{itemize}
+\item \textbf{Step 1: Recursive Case - the Flow} GCD is the largest positive integer that divides the numbers without a remainder. For example, if $gcd(8, 12)$, it should equal 4. If we want to have the GCD of $gcd(48,18)$, the \textbf{Euclidean Algorithm} for GDC calculation is:
+\begin{itemize}
+\item 1. $48/18=2$, remainder 12.
+\item 2. $18/12=1$, remainder 6.
+\item 3. $12/6=2$. remainder 0.
+\item 4. Additionally, $gcd(b, a)=gcd(b, a \% b)$ and $gcd(a, 0)=a$.
+\end{itemize}
+\item \textbf{Step 2: Base Case - the Stopping Criterion}
+\begin{itemize}
+\item b=0.
+\end{itemize}
+\item \textbf{Step 3: Unintentional Case - the constraint}
+\begin{itemize}
+\item Positive Integers
+\item Convert Negative Numbers to Positive
+\end{itemize}
+\end{itemize}
+\begin{lstlisting}[language=Python, caption = Solution for GCD]
+def gcd(q1, q2):
+	assert int(q1) == q1 and int(q2) == q2, 'The numbers must be integer only!'
+	if q1 < 0:
+		q1 = -1*q1
+	if q2 < 0:
+		q2 = -1*q2
+	if q1%q2 == 0:
+		return q2
+	else:
+		return gcd(q2, q1%q2)
+		
+print(gcd(32, 16))
+\end{lstlisting}
+
+\subsection{How to Convert a Number from Decimal to Binary Using Recursion?}
+\begin{itemize}
+\item \textbf{Step 1: Recursive Case - the Flow}
+\begin{itemize}
+\item 1. Divide the number by 2.
+\item 2. Get the integer quotient for the next iteration
+\item 3. Get the remainder for the binary digit
+\item 4. Repeat the steps until the quotient is equal to 0
+\end{itemize}
+\begin{table}[h!]
+\centering
+\caption{Example for 10 Converting to Binary Number}
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Division by 2} & \textbf{Quotient} & \textbf{Remainder} & \textbf{Flow}\\
+\hline
+10/2 & 5 & 0 & $0+10\times (101) = 0+10\times f(10-10\%2)$ \\
+5/2 & 2 & 1 & $f(10-10\%2) = 1 + 10 \times f\big((10-10\%2)-(10-10\%2)\%2\big)$\\
+2/2 & 1 & 0 & $f\big((10-10\%2)-(10-10\%2)\big)=0+10\times f(\ldots)$\\
+1/2 & 0 & 1 & $1\//2=0,\quad 1\%2$\\
+\hline
+\end{tabular}
+\end{table}
+\end{itemize}
+
+\begin{lstlisting}[language=Python, caption=Solution for Decimal Converting to Binary]
+def d2b(n):
+	if n<0:
+		n = n*-1                                                                                                                                                                                                                                                             
+	if n//2 == 0:
+		return n%2
+	else:
+		return n%2+10*(d2b(n//2))
+print(d2b(13))
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
