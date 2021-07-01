@@ -358,8 +358,155 @@ def d2b(n):
 		return n%2
 	else:
 		return n%2+10*(d2b(n//2))
+		
 print(d2b(13))
 \end{lstlisting}
+
+\section{Coding Exercise}
+\begin{itemize}
+\item \textbf{Power} Write a function called power which accepts a base and an exponent. The function should return the power to the exponent. This function should mimic the functionality of math.pow()-do not worry about negative bases and exponents. 
+\begin{lstlisting}[language=Python, caption=Solution for productOfArray]
+def power(base, exponent):
+    if exponent == 0:
+        return 1
+    return base * power(base, exponent-1)
+    
+print(power(2, 9))
+\end{lstlisting}
+\item \textbf{productOfArray} Write a function called \textbf{productOfArray} which takes in an array of numbers and returns the product of them all.
+\begin{lstlisting}[language=Python, caption=Solution for productOfArray]
+def productOfArray(arr):
+    if len(arr) == 0:
+        return 1
+    else:
+        return arr.pop()*productOfArray(arr)
+
+print(productOfArray([1,2,3]))
+\end{lstlisting}
+
+\item \textbf{recursiveRange} Write a function called \textbf{recursiveRange} which accepts a number and adds up all numbers from 0 to the number passed to the function.
+\begin{lstlisting}[language=Python, caption=Solution for recursiveRange]
+def recursiveRange(num):
+    assert num >= 0, "the input number should be bigger than 0"
+    if num == 0:
+        return 0
+    else:
+        return num + recursiveRange(num-1)
+    
+print(recursiveRange(10))
+\end{lstlisting}
+
+\item \textbf{Fibonacci} Write a recursive function called \textbf{fib} which accepts a number and returns the $n^{th}$ number in the Fibonacci sequence. Recall that the Fibonacci sequence is the sequence of whole numbers 0,1,2,3,5,8,$\ldots$ which starts with 0 and 1, and where every number thereafter is equal to the sum of the previous two numbers.
+\begin{lstlisting}[language=Python, caption=Solution for fib]
+def fib(num):
+    assert num >=0, "num should be non negative"
+    if num == 0:
+        return 0
+    if num == 1:
+        return 1
+    return fib(num-1)+fib(num-2)
+    
+print(fib(4))
+\end{lstlisting}
+
+\item \textbf{Reverse} Write a recursive function called \textbf{reverse} which accepts a string and returns a new string in reverse.
+\begin{lstlisting}[language=Python, caption=Solution for Reverse]
+def reverse(strng):
+    if len(strng)==1:
+        return strng
+    else:
+        return strng[len(strng)-1]+reverse(strng[0:(len(strng)-1)])
+\end{lstlisting}
+\textbf{Note}: when strng[0:3] means strng[0]+strng[1]+strng[2].
+
+\item \textbf{isPalindrome} Write a recursive function called isPalindrome which returns true if the string passed to it is a palindrome (reads the same forward and backward). Otherwise it returns false.
+\begin{lstlisting}[language=Python, caption=Solution for isPalindrome]
+def isPalindrome(strng):
+    if len(strng) == 0:
+        return True
+    if strng[0] != strng[len(strng)-1]:
+        return False
+    return isPalindrome(strng[1:len(strng)-1])
+\end{lstlisting}
+
+\item \textbf{someRecursive} Write a recursive function called \textbf{someRecursive} which accepts an array and a callback. The function returns true if a single value in the array returns true when passed to the callback. Otherwise it returns false.
+\begin{lstlisting}[language=Python, caption=Solving for someRecursive]
+def isOdd(num):
+    if num%2==0:
+        return False
+    else:
+        return True
+        
+def someRecursive(arr, cb):
+    if cb(arr.pop()) == True:
+        return True
+    if len(arr) == 0:
+        return False
+    return someRecursive(arr, cb)
+\end{lstlisting}
+
+\item $\star\star$ \textbf{flatten} Write a recursive function called \textbf{flatten} which accepts an array of arrays and returns a new array with values flattened. \\
+
+\textbf{Example}
+\begin{lstlisting}[language=Python]
+flatten([1,2,3,[4,5]]) # [1,2,3,4,5]
+flatten([1,[2,[3,4],[[5]]]]) # [1,2,3,4,5]
+flatten([[1],[2],[3]]) # [1,2,3]
+flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]) # [1,2,3]
+\end{lstlisting}
+\textbf{Solution}
+\begin{lstlisting}[language=Python]
+def flatten(arr):
+    line_list = []
+    for item in arr:
+        if type(item) is list:
+            line_list.extend(flatten(item))
+        else:
+            line_list.append(item)
+    return line_list
+\end{lstlisting}
+\textbf{Note}: python extend() and append() are different. The similar of these two method is to add the received cell at the tail of the list. But the extend() method can only accept the list and keep the item of the list into the original list position. However, the append() method can accept any type of data structure and simply add the item at the tail of the list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{itemize}
 
 
 

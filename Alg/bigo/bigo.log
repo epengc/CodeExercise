@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.14)  30 JUN 2021 19:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.6.14)  1 JUL 2021 01:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**recursion.tex
-(./recursion.tex
+**bigo.tex
+(./bigo.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -560,48 +560,48 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count271
 \l__pdf_internal_box=\box49
 )
-(./recursion.aux)
-\openout1 = `recursion.aux'.
+(./bigo.aux)
+\openout1 = `bigo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 43.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 42.
 LaTeX Font Info:    Trying to load font information for OML+jkp on input line 4
-3.
+2.
  (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 42.
 LaTeX Font Info:    Trying to load font information for OMS+jkp on input line 4
-3.
+2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 42.
 LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 4
-3.
+2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 42.
 LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 
-43.
+42.
 
 (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Trying to load font information for OT1+jkp on input line 4
-3.
+2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/ot1jkp.fd
 File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
@@ -665,91 +665,84 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for U+jkpsya on input line 
-45.
+44.
 (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/ujkpsya.fd
 File: ujkpsya.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    Trying to load font information for U+jkpsyb on input line 
-45.
+44.
 
 (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/ujkpsyb.fd
 File: ujkpsyb.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    Trying to load font information for U+jkpmia on input line 
-45.
+44.
 
 (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/ujkpmia.fd
 File: ujkpmia.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    Trying to load font information for U+jkpsyc on input line 
-45.
+44.
 
 (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 5
-4.
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 5
+5.
 (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/ts1jkp.fd
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )
+<images/Screenshot from 2021-06-30 20-24-08.png, id=7, 2286.5425pt x 252.945pt>
+
+File: images/Screenshot from 2021-06-30 20-24-08.png Graphic file (type png)
+<use images/Screenshot from 2021-06-30 20-24-08.png>
+Package pdftex.def Info: images/Screenshot from 2021-06-30 20-24-08.png  used o
+n input line 69.
+(pdftex.def)             Requested size: 457.3004pt x 50.5881pt.
+
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 LaTeX Font Info:    Trying to load font information for OT1+jkptt on input line
- 59.
+ 101.
 
 (/usr/share/texlive/texmf-dist/tex/latex/kpfonts/ot1jkptt.fd
 File: ot1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for OT1/jkptt.
-) [1]
-Overfull \hbox (3.75078pt too wide) in paragraph at lines 158--158
-[]\OT1/jkp/b/n/10 Recursion| 
- []
+) [1 <./images/Screenshot from 2021-06-30 20-24-08.png>]
+<images/Screenshot from 2021-07-01 01-23-01.png, id=18, 1794.705pt x 1164.35pt>
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
-
- []
-
-[4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
-
- []
-
-[7] (./recursion.aux) ) 
+File: images/Screenshot from 2021-07-01 01-23-01.png Graphic file (type png)
+<use images/Screenshot from 2021-07-01 01-23-01.png>
+Package pdftex.def Info: images/Screenshot from 2021-07-01 01-23-01.png  used o
+n input line 150.
+(pdftex.def)             Requested size: 358.93465pt x 232.86588pt.
+ [2 <./images/Screenshot from 2021-07-01 01-23-01.png>] (./bigo.aux) ) 
 Here is how much of TeX's memory you used:
- 6968 strings out of 481239
- 89379 string characters out of 5920377
- 611967 words of memory out of 5000000
- 22125 multiletter control sequences out of 15000+600000
- 568813 words of font info for 107 fonts, out of 8000000 for 9000
+ 6958 strings out of 481239
+ 89659 string characters out of 5920377
+ 559711 words of memory out of 5000000
+ 22113 multiletter control sequences out of 15000+600000
+ 572190 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,14n,42p,402b,1755s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
-nc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}</
-usr/share/texlive/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/kpfonts/jkpex.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/kpfonts/jkpmn8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/kpfonts/jkpmne.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/kp
-fonts/jkpsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/kpfonts/jkptt
-mn8a.pfb>
-Output written on recursion.pdf (8 pages, 77179 bytes).
+ 30i,10n,42p,221b,1305s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/sha
+re/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dis
+t/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}</usr/share/texlive/texmf-dist/fon
+ts/type1/public/kpfonts/jkpbn8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/kpfonts/jkpmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/kpfo
+nts/jkpmia.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/kpfonts/jkpmn8
+a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/kpfonts/jkpmne.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
+Output written on bigo.pdf (3 pages, 779292 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
